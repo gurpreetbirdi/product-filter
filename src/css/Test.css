@@ -1,0 +1,83 @@
+@media print{
+  .Link{
+    display: none;
+  }
+}
+.Link{
+  text-decoration:underline;
+  font-size: 20px;
+  color: white;
+}
+.Link:hover{
+  color: blue;
+  font-weight: bold;
+}
+.MenuBar{
+  background-color: grey;
+}
+a > img{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+#menuBar:hover{
+  color: white;
+}
+.Uppercase{
+  text-transform: uppercase;
+}
+.BackgroundImg{
+  background-image: url("../icons/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.GreyBox{
+  background-color: #818181;
+  width: 300px;
+  height: 300px;
+  transform: rotate(-2deg);
+}
+.BlackBox{
+  background-color: #F2D447;
+  width: 300px;
+  height: 300px;
+  transform: rotate(2deg);
+}
+#Login{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#Login span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#Login span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#Login:hover span {
+  padding-right: 25px;
+}
+
+#Login:hover span:after {
+  opacity: 1;
+  right: 0;
+}

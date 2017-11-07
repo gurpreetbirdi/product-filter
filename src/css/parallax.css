@@ -1,0 +1,28 @@
+.background{
+  background-image: url("../icons/background.jpg");
+  width: auto;
+  height: 600px;
+}
+.Box{
+  width:100px;
+  height:300px;
+  color:blue;
+  border-style: solid;
+  position:absolute;
+  top:300px;
+  left: 300px;
+}   
+
+#animate {
+  animation: move 5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  from {
+     transform: translateY(300px);
+   }
+  to {
+     transform: translateY(-100px);
+  }
+}
