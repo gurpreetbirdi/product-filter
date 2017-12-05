@@ -10,9 +10,10 @@ import ReactDOM from 'react-dom';
 // import Shift from './test/Shift';
 // import Production from './test/Production';
 // import Login from './test/Login';
-// import BasicExample from './test/ReactRouterBasic';
+import BasicExample from './test/ReactRouterBasic';
 import Translate from './parallax/Translate';
 import AuthExample from './test/ReactRouter';
+import Authentic from './reactRouter/Authentic';
 import registerServiceWorker from './registerServiceWorker';
 
 // eslint-disable-next-line
@@ -25,5 +26,5 @@ var PRODUCTS = [
   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
 
-ReactDOM.render(<AuthExample />, document.getElementById('root'));
+ReactDOM.render(<Authentic />, document.getElementById('root'));
 registerServiceWorker();
