@@ -14,6 +14,7 @@ import CustomTextInput from './RefEx';
 import Form from './Form';
 import DataList from './DataList';
 import Login from './Login';
+import DataTable from './DataTable';
 
 import menuBar from '../icons/menuBar.png';
 
@@ -54,6 +55,7 @@ render(){
           <Link to="/Form" className="Link">Form</Link><span>  </span>
           <Link to="/DataList" className="Link">DataList</Link><span>  </span>
           <Link to="/Login" className="Link">Login</Link><span>  </span>
+          <Link to="/DataTable" className="Link">DataTable</Link><span>  </span>
         </div>
         <hr/>
         <Route exact path="/" component={Home}/>
@@ -66,7 +68,8 @@ render(){
         <Route path="/RefEx" component={RefEx1}/>
         <Route path="/Form" component={Form1}/>
         <Route path="/DataList" component={DataList1}/>
-        <Route path="/Login" component={Login1}/>
+        <Route path="/Login" component={Login1} />
+        <Route path="/DataTable" component={DataTable1}/>
       </div>
     </Router>
   );
@@ -127,6 +130,11 @@ render(){
     const Login1 = () => (
     <div className="BackgroundImg">
       <Login />,
+    </div>
+    );
+    const DataTable1 = () => (
+      <div>
+        <DataTable />,
     </div>
     );
     const Topics = ({ match }) => (

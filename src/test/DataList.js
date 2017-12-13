@@ -19,6 +19,19 @@ handleClick=(e)=>{
   e.preventDefault();
 console.log(this.state);
 }
+  iframeLoaded = () => {
+    let iframeWin = document.getElementById('bfFrame').contentWindow;
+    iframeWin.postMessage('jwtToken', 'http://localhost:3000/');
+  }
+  componentDidMount = () => {
+    let checkSender = (e) => {
+      // if (e.origin !== "http://localhost:3000")
+      // return;
+      console.log(e.data);
+      console.log(e.origin);
+    }
+    window.addEventListener('message', checkSender);
+  }
 render(){
   return(
     <div className="container">
@@ -33,6 +46,10 @@ render(){
       </datalist>
       <input type="button" value="Save Shift" onClick={this.handleClick} />
       </form>
+      <div>
+        <iframe className='ssc-iframe' name='bfFrame' id='bfFrame' onLoad={this.iframeLoaded}
+          title='BluefinIFrame' src={'http://localhost:3000/'}></iframe>
+      </div>
     </div>
   );
 }

@@ -26,5 +26,5 @@ var PRODUCTS = [
   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
 
-ReactDOM.render(<Authentic />, document.getElementById('root'));
+ReactDOM.render(<BasicExample />, document.getElementById('root'));
 registerServiceWorker();
